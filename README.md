@@ -56,8 +56,8 @@ I also designed a case that can printed on a 3d printer. The .STL file is part o
 
 ## Firmware
 
-At this moment there are several options
-* Sören Beye created firmware to integrate dehumidifiers ith Home Assistant: https://github.com/Hypfer/esp8266-midea-dehumidifier
-* Sergey V. Dudanov create an extension for ESPHome integrating aircondititioners with Home Assistant: https://github.com/dudanov/esphome
-* I created a node.js module to integrate airconditioners with aything you like, but you need to program: https://github.com/reneklootwijk/node-mideahvac. The firmware required on the dongle is a esplink, a serial bridge: https://github.com/dudanov/esphome
+At this moment there are several options:
+* Sören Beye created firmware to integrate dehumidifiers with Home Assistant: https://github.com/Hypfer/esp8266-midea-dehumidifier.
+* Sergey V. Dudanov created an extension for ESPHome integrating aircondititioners with Home Assistant: https://github.com/dudanov/esphome.
+* I created a node.js module to integrate airconditioners with anything you like, but you need to program: https://github.com/reneklootwijk/node-mideahvac. The firmware required on the dongle is esplink, a serial bridge: https://github.com/jeelabs/esp-link.
 * To reverse engineer the protocol the original dongle is using to communicate with your appliance, you can use this custom dongle to capture this communication. See https://github.com/reneklootwijk/midea-uartsniffer.
