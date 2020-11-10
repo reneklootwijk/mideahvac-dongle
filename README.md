@@ -1,7 +1,7 @@
 # Midea HVAC WiFi Dongle
 
 This repository contains the hardware design of a WiFi dongle for Midea-like airconditioners and humidifiers.
-Midea provides a WiFi dongle (SK102/SK103), either as optional feature or build-in, to control the appliances via a mobile application. This dongle uses and is dependent on the Midea cloud which does not expose a publically available API. The protocol used by the dongle has been reverse engineered, but newer version still require the cloud to obtain an encryption key or require an addition server simulating the Midea cloud. This means integration in an existing home automation system is not straight forward.
+Midea provides a WiFi dongle (SK102/SK103), either as optional feature or built-in, to control the appliances via a mobile application. This dongle uses and is dependent on the Midea cloud which does not expose a publically available API. The protocol used by the dongle has been reverse engineered, but newer version still require the cloud to obtain an encryption key or require an addition server simulating the Midea cloud. This means integration in an existing home automation system is not straight forward.
 
 Besides the protocol the dongle uses to commumicate with the mobile app and the cloud, also the protocol that is used between the dongle and the appliances has been reverse engineered (at least the most important parts). This means the original dongle can be replaced by a custom dongle making it independent on any cloud.
 
@@ -37,7 +37,7 @@ The PCB can be ordered by the manufacturer of your choosing. I had it manufactur
   <em>The assembled PCB</em>
 </p>
 
-The JLCPCB directory contains the followig files:
+The JLCPCB directory contains the following files:
 
 * Gerber-Midea WiFi Dongle v1.zip, this zip contains all gerber files and the drill file.
 * BOM-Midea WiFi Dongle.csv, this is the Bill Of Material file.
@@ -54,3 +54,10 @@ I also designed a case that can printed on a 3d printer. The .STL file is part o
   <em>The 3D printed case</em>
 </p>
 
+## Firmware
+
+At this moment there are several options
+* Sören Beye created firmware to integrate dehumidifiers ith Home Assistant: https://github.com/Hypfer/esp8266-midea-dehumidifier
+* Sergey V. Dudanov create an extension for ESPHome integrating aircondititioners with Home Assistant: https://github.com/dudanov/esphome
+* I created a node.js module to integrate airconditioners with aything you like, but you need to program: https://github.com/reneklootwijk/node-mideahvac. The firmware required on the dongle is a esplink, a serial bridge: https://github.com/dudanov/esphome
+* To reverse engineer the protocol the original dongle is using to communicate with your appliance, you can use this custom dongle to capture this communication. See https://github.com/reneklootwijk/midea-uartsniffer.
