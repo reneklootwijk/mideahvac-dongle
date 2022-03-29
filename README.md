@@ -12,6 +12,7 @@ Besides Midea itself other vendors of these type of appliances are also using th
 * Carrier
 * Toshiba
 * Idema
+* Dimstal/Simando
 
 This design of a custom dongle can be used to replace the orignal dongle with a type A USB connector. The version with with a JST-XH connector needs a slight modification.
 
